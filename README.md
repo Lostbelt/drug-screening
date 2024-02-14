@@ -1,6 +1,6 @@
 # drugs-screening
 
-Implementation of AI-driven method for CNS drug research utilizing adult zebrafish. The method is based on the novel tank diving task (NTT) behavioral experiment.
+Implementation of AI-driven method for CNS drug research utilizing adult zebrafish. The method is based on the novel tank test (NTT) behavioral experiment.
 
 ## Installation
 
