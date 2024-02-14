@@ -4,6 +4,14 @@ Implementation of AI-driven method for CNS drug research utilizing adult zebrafi
 
 For now, only videos in MP4 format are supported.
 
+<div align="center">
+  <img src="https://github.com/Lostbelt/drug-screening/blob/main/notebooks/Screenshot_2.png" width="500"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Lostbelt/drug-screening/blob/main/notebooks/Screenshot_1.png" width="300"/>
+</div>
+
 ## Installation
 
 Create a conda environment and activate it
