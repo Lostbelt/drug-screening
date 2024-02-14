@@ -5,13 +5,12 @@ from glob import glob
 import matplotlib.pyplot as plt
 import os
 from ultralytics import YOLO
-import supervision as sv
 import math
 from segment_anything import SamPredictor
 import torch
 from segment_anything import sam_model_registry
 import pandas as pd
-from skimage.transform import resize
+
 from PIL import Image
 import time
 import matplotlib.patches as patches
@@ -20,7 +19,14 @@ from scipy.spatial import distance
 
 from utils import transform_view, mask_to_coordinates
 
+M = np.array([[1.765021036058813e+03,0,1.138773062221580e+03],
+              [0,1.771407766368966e+03,8.077989696031810e+02],
+              [0,0,1]])
 
+D = np.array([-0.4433, 0.1769, 0, 0, 0])
+
+h, w = (1440, 2560)
+newcameramtx, roi = cv2.getOptimalNewCameraMatrix(M, D, (w,h), 1, (w,h))
 
 
 
@@ -33,19 +39,19 @@ directoires =  glob(f'{video_files_dir}/*.MP4')
 
 
 count = 0
-model = YOLO('tank_detector.pt')
+model = YOLO('weights/tank_detector.pt')
 
-fish_waights = 'zebrafish_detector.pt'
+fish_waights = 'weights/zebrafish_detector.pt'
 
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 MODEL_TYPE = "vit_b"
-sam = sam_model_registry[MODEL_TYPE](checkpoint='sam_vit_b_01ec64.pth')
+sam = sam_model_registry[MODEL_TYPE](checkpoint='weights/sam_vit_b_01ec64.pth')
 sam.to(device=DEVICE)
 
 mask_predictor = SamPredictor(sam)
 
 
-
+data = {}
 
 
 
@@ -61,6 +67,7 @@ for path in directoires:
     data[file_name] = []
     start = time.time()
     
+    print(path)
     
     vidcap = cv2.VideoCapture(path)
     for _ in range(30 * 4):
@@ -68,6 +75,8 @@ for path in directoires:
     
     vidcap.release()
     cv2.destroyAllWindows()
+    
+    # image = cv2.undistort(image, M, D, None, newcameramtx)
     
     res = model.predict(image, conf=0.5, verbose=False)
     ans = mask_to_coordinates(image, sorted(res[0].boxes.xyxy.to('cpu').numpy(), key=lambda box: box[0]), mask_predictor)
@@ -115,6 +124,8 @@ for path in directoires:
         
         if not success:
             break
+            
+        # image = cv2.undistort(image, M, D, None, newcameramtx)
         
         
         
