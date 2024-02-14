@@ -30,7 +30,7 @@ pip install torch torchvision scikit-image ultralytics
 
 ## <a name="GettingStarted"></a>Getting Started
 
-First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place it to Checkpoints.
+First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place them in the weight folder.
 
 Start video processing with the command
 ```
