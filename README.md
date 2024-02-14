@@ -23,7 +23,7 @@ Install dependencies
 ```
 git clone https://github.com/Lostbelt/drug-screening.git
 cd drug-screening
-pip install ultralytics pytorch>=1.7 torchvision>=0.8
+pip install ultralytics pytorch torchvision
 ```
 
 ## <a name="GettingStarted"></a>Getting Started
