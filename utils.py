@@ -66,10 +66,10 @@ def mask_to_coordinates(image, array, mask_predictor):
         abl_l_n = new_im[y:,:x]
         abl_r_n = new_im[y:,x:]
 
-        X1, Y1 = dist(abl_l_v, y, x)
-        X2, Y2 = dist(abl_r_v, y, 0)
-        X3, Y3 = dist(abl_r_n, 0, 0)
-        X4, Y4 = dist(abl_l_n, 0, x)
+        X1, Y1 = farthest_point(abl_l_v, y, x)
+        X2, Y2 = farthest_point(abl_r_v, y, 0)
+        X3, Y3 = farthest_point(abl_r_n, 0, 0)
+        X4, Y4 = farthest_point(abl_l_n, 0, x)
 
         angles_list = np.array([
         [X1 / 0.7, Y1],
