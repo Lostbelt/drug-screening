@@ -29,19 +29,7 @@ pip install -e requirements.txt
 
 First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place it to Checkpoints.
 
-
+Start video processing with the command
 ```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
+python run.py <video_files_dir>
 ```
