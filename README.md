@@ -36,3 +36,5 @@ Start video processing with the command
 ```
 python run.py <video_files_dir>
 ```
+
+Next, look at the processing file in the notebooks folder
