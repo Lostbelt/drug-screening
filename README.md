@@ -15,5 +15,7 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 Install dependencies
 
 ```
+git clone https://github.com/Lostbelt/drug-screening.git
+cd drug-screening
 pip install -e requirements.txt
 ```
