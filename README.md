@@ -40,7 +40,7 @@ pip install torch torchvision scikit-image ultralytics
 
 First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place them in the weight folder.
 
-If you need to further train your models to detect tanks and zebrafish, use the instructions at this [link](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format).
+If you need to further train the tank detector or the zebrafish detector, use the instructions at this [link](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format).
 
 All your videos should be in one folder as shown below
 
