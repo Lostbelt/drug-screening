@@ -28,9 +28,25 @@ cd drug-screening
 pip install torch torchvision scikit-image ultralytics
 ```
 
-## <a name="GettingStarted"></a>Getting Started
+## Data preparation
 
 First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place them in the weight folder.
+
+If you need to further train your models to detect tanks and zebrafish, use the instructions at this [link](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format).
+
+All your videos should be in one folder as shown below
+
+```
+data
+├── video_1.mp4
+├── video_2.mp4
+├── video_3.mp4
+├── video_4.mp4
+├── ...
+```
+
+
+## <a name="GettingStarted"></a>Getting Started
 
 Start video processing with the command
 ```
