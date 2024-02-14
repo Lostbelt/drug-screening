@@ -22,23 +22,20 @@ pip install -e requirements.txt
 
 ## <a name="GettingStarted"></a>Getting Started
 
-First download a [model checkpoint](#model-checkpoints). Then the model can be used in just a few lines to get masks from a given prompt:
+First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place it to Checkpoints.
 
-```
-from segment_anything import SamPredictor, sam_model_registry
-sam = sam_model_registry["<model_type>"](checkpoint="<path/to/checkpoint>")
-predictor = SamPredictor(sam)
-predictor.set_image(<your_image>)
-masks, _, _ = predictor.predict(<input_prompts>)
-```
-
-or generate masks for an entire image:
 
 ```
 
 ```
 
-Additionally, masks can be generated for images from the command line:
+
+
+```
+
+```
+
+
 
 ```
 
