@@ -54,6 +54,12 @@ data
 
 ## <a name="GettingStarted"></a>Getting Started
 
+To check whether tanks are detected correctly, run the command
+
+```
+python vis_test/test_segmentation.py <video_files_dir>
+```
+
 Start video processing with the command
 ```
 python run.py <video_files_dir>
