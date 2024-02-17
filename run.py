@@ -35,7 +35,7 @@ video_files_dir = sys.argv[1]
 
 
 
-directoires =  glob(f'{video_files_dir}/*.MP4')
+directoires =  glob(f'{video_files_dir}/*.*)
 
 
 count = 0
