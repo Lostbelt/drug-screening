@@ -2,8 +2,6 @@
 
 Implementation of AI-driven method for CNS drug research utilizing adult zebrafish. The method is based on the novel tank test (NTT) behavioral experiment.
 
-For now, only videos in MP4 format are supported.
-
 <div align="center">
   <img src="https://github.com/Lostbelt/drug-screening/blob/main/notebooks/Screenshot_2.png" width="500"/>
 </div>
@@ -33,7 +31,7 @@ Install dependencies
 ```
 git clone https://github.com/Lostbelt/drug-screening.git
 cd drug-screening
-pip install torch torchvision scikit-image ultralytics
+pip install torch torchvision scikit-image ultralytics scikit-learn
 ```
 
 ## Data preparation
