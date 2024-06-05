@@ -92,10 +92,10 @@ for path in directoires:
         modelv1 = YOLO(fish_waights)
         modelv2 = YOLO(fish_waights)
         
-        image = transform_view(image, ans['new_cors'][0])
-        h1, w1, _ = image.shape
-        image = transform_view(image, ans['new_cors'][1])
-        h2, w2, _ = image.shape
+        image_1 = transform_view(image, ans['new_cors'][0])
+        h1, w1, _ = image_1.shape
+        image_2 = transform_view(image, ans['new_cors'][1])
+        h2, w2, _ = image_2.shape
         
         
         
