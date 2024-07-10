@@ -57,7 +57,7 @@ data
 To check whether tanks are detected correctly, run the command
 
 ```
-python vis_test/test_segmentation.py <video_files_dir>
+python test_segmentation.py <video_files_dir>
 ```
 
 Start video processing with the command
