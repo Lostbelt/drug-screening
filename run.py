@@ -19,23 +19,21 @@ from scipy.spatial import distance
 
 from utils import transform_view, mask_to_coordinates
 
-M = np.array([[1.765021036058813e+03,0,1.138773062221580e+03],
-              [0,1.771407766368966e+03,8.077989696031810e+02],
-              [0,0,1]])
+# M = np.array([[1.765021036058813e+03,0,1.138773062221580e+03],
+#               [0,1.771407766368966e+03,8.077989696031810e+02],
+#               [0,0,1]])
 
-D = np.array([-0.4433, 0.1769, 0, 0, 0])
+# D = np.array([-0.4433, 0.1769, 0, 0, 0])
 
-h, w = (1440, 2560)
-newcameramtx, roi = cv2.getOptimalNewCameraMatrix(M, D, (w,h), 1, (w,h))
-
-
+# h, w = (1440, 2560)
+# newcameramtx, roi = cv2.getOptimalNewCameraMatrix(M, D, (w,h), 1, (w,h))
 
 
 video_files_dir = sys.argv[1]
 
 
 
-directoires =  glob(f'{video_files_dir}/*.*)
+directoires =  glob(f'{video_files_dir}/*.*')
 
 
 count = 0
@@ -52,8 +50,6 @@ mask_predictor = SamPredictor(sam)
 
 
 data = {}
-
-
 
 
 
