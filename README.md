@@ -19,6 +19,14 @@ conda create --name screening python=3.9 -y
 conda activate screening
 ```
 
+Install dependencies
+
+```
+git clone https://github.com/Lostbelt/drug-screening.git
+cd drug-screening
+pip install -r requirements.txt
+```
+
 Install Segment Anything:
 
 ```
@@ -26,19 +34,13 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
 
 
-Install dependencies
-
-```
-git clone https://github.com/Lostbelt/drug-screening.git
-cd drug-screening
-pip install torch torchvision scikit-image ultralytics scikit-learn
-```
-
 ## Data preparation
 
 First download [models checkpoints](https://drive.google.com/drive/folders/1Ahy9nWQRqqwMCV9Di8jhIZyxUQmo5NaC?usp=sharing) and place them in the weight folder.
 
 If you need to further train the tank detector or the zebrafish detector, use the instructions at this [link](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format).
+
+Link to test dataset: [link](https://drive.google.com/drive/folders/1dQLdCv_ZjwLjd1EjQ8yoUGVTP5J0Gd1E?usp=sharing).
 
 All your videos should be in one folder as shown below
 
